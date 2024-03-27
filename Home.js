@@ -47,16 +47,8 @@ function Home() {
   };
 
   return (
-    <div style={{ position: 'relative' }}>
-      <div style={{ position: 'absolute', bottom: '660px', right: '70px' }}>
-        <input
-          type="text"
-          placeholder="Search for Tuition..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          style={{ width: '200px', padding: '7px', borderRadius: '5px', border: '1px solid #ccc' }}
-        />
-      </div>
+    <div style={{ position: 'relative' , paddingBottom: '130px'}}>
+      
       <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
         <div style={cardStyle('assignTeacherList')} onMouseEnter={() => setHoveredCard('assignTeacherList')} onMouseLeave={() => setHoveredCard('')}>
           <img src="/bolla.jpg" alt="Assign Teacher List" style={imageStyle} />
@@ -98,8 +90,19 @@ function Home() {
           </div>
         </div>
       )}
+      {/* Footer section */}
+      <div style={{ backgroundColor: '#4682B4', color: '#000000', textAlign: 'center', padding: '20px', position: 'fixed', bottom: 0, left: 0, width: '100%' }}>
+    <a href="https://www.facebook.com/sirajummonir.monir.5" target="_blank" rel="noopener noreferrer"><img src="/fb1.png" alt="Facebook" style={{ width: '30px', marginRight: '10px' }} /></a>
+    <a href="https://twitter.com/ayon_chayo33456" target="_blank" rel="noopener noreferrer"><img src="/twitter.jpeg" alt="Twitter" style={{ width: '30px', marginRight: '10px' }} /></a>
+    <a href="https://www.instagram.com/monir_chayon/" target="_blank" rel="noopener noreferrer"><img src="/insta.jpeg" alt="Instagram" style={{ width: '30px', marginRight: '10px' }} /></a>
+    <a href="https://github.com/monir235" target="_blank" rel="noopener noreferrer"><img src="/git.png" alt="GitHub" style={{ width: '30px' }} /></a>
+    <div style={{ marginTop: '10px',fontWeight:'BOLD' }}>© 2024 Sirajum Monir | University of Chittagong</div>
+</div>
+
+
     </div>
   );
 }
 
 export default Home;
+
